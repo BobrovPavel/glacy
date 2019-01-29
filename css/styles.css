@@ -318,12 +318,12 @@ figure {
     padding: 8px 35px 8px 45px;
 }
 
-.basket-item a:hover:not(.dropdown a),
-.basket-item a:focus:not(.dropdown a),
-.login-item a:hover:not(.dropdown a),
-.login-item a:focus:not(.dropdown a),
-.search-item a:hover:not(.dropdown a),
-.search-item a:focus:not(.dropdown a) {
+.basket-item a:hover,
+.basket-item a:focus,
+.login-item a:hover,
+.login-item a:focus,
+.search-item a:hover,
+.search-item a:focus {
     background: #fff;
     color: #000;
 }
@@ -446,11 +446,11 @@ figure {
     height: 44px;
 }
 
-.choice {
+.login-form .choice {
     padding-left: 20px;
 }
 
-.choice a {
+.login-form .choice a {
     font-size: 13px;
     line-height: 24px;
     text-decoration: underline;
@@ -459,8 +459,8 @@ figure {
     background: none;
 }
 
-.choice a:hover,
-.choice a:focus {
+.login-form .choice a:hover,
+.login-form .choice a:focus {
     color: #e84d37;
 }
 
