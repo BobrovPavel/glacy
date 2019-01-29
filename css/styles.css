@@ -157,8 +157,8 @@ figure {
     box-shadow: inset 0px 2px 1px #696969;
 }
 
-.nav-item:hover > a,
-.nav-item:focus > a {
+.nav-item:hover .navref,
+.nav-item:focus .navref {
     padding: 8px 15px 8px 15px;
     margin: 0;
     border-radius: 16px;
@@ -166,8 +166,8 @@ figure {
     color: black;
 }
 
-.nav-item.current-item > a,
-.nav-item.current-item > a {
+.nav-item.current-item .dropref,
+.nav-item.current-item .dropref {
     padding: 8px 15px 8px 15px;
     margin: 0;
     border-radius: 16px;
@@ -185,8 +185,8 @@ figure {
     box-shadow: inset 0px 2px 1px #696969;
 }
 
-.nav-item.current-item:hover > a,
-.nav-item.current-item:focus > a {
+.nav-item.current-item:hover .dropref,
+.nav-item.current-item:focus .dropref {
     padding: 8px 15px 8px 15px;
     margin: 0;
     border-radius: 16px;
@@ -194,7 +194,7 @@ figure {
     color: black;
 }
 
-.nav-item:active > a {
+.nav-item:active .dropref {
     padding: 8px 15px 8px 15px;
     margin: 0;
     border-radius: 16px;
@@ -505,8 +505,8 @@ figure {
     transform: translateY(-50%);
 }
 
-.search-item:hover > a,
-.search-item:focus > a,
+.search-item:hover .navref,
+.search-item:focus .navref,
 .search-item a:hover,
 .search-item a:focus {
     background: #fff;
@@ -578,39 +578,39 @@ figure {
     margin: auto;
 }
 
-.search-item:hover > a,
-.search-item:focus > a {
+.search-item:hover .navref,
+.search-item:focus .navref {
     background: #fff;
 }
 
-.search-item:hover > a::before,
-.search-item:focus > a::before {
+.search-item:hover .navref::before,
+.search-item:focus .navref::before {
     background-image: url("../img/loupe-black.svg");
 }
 
-.login-item:hover > a,
-.login-item:focus > a,
+.login-item:hover .navref,
+.login-item:focus .navref,
 .login-item a:hover, 
 .login-item a:focus {
     background: #fff;
     color: #000;
 }
 
-.login-item:hover > a::before,
-.login-item:focus > a::before {
+.login-item:hover .navref::before,
+.login-item:focus .navref::before {
     background-image: url("../img/entrance-black.svg");
 }
 
-.basket-item:hover > a,
-.basket-item:focus > a,
+.basket-item:hover .navref,
+.basket-item:focus .navref,
 .basket-item a:hover,
 .basket-item a:focus {
     background: #fff;
     color: #000;
 }
 
-.basket-item:hover > a::before,
-.basket-item:focus > a::before {
+.basket-item:hover .navref::before,
+.basket-item:focus .navref::before {
     background-image: url("../img/basket-red.svg");
 }
 
@@ -1546,6 +1546,7 @@ figure {
     line-height: 18px;
     border-radius: 18px;
     margin-top: 19px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
