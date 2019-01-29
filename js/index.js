@@ -72,10 +72,6 @@ overlay.addEventListener("click", function() {
     closeModal(feedbackModal);
 });
 
-submitButton.addEventListener("click", function() {
-    closeModal(feedbackModal);
-});
-
 window.addEventListener("keydown", function(evt) {
     if(evt.keyCode == 27) {
         evt.preventDefault();

@@ -20,11 +20,7 @@ body {
     font-weight: 400;
     padding: 0;
     background: #819c8e;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
+    min-width: 1200px;
 }
 
 h2 {
@@ -141,7 +137,6 @@ figure {
 .nav-item a {
     border-bottom: 1px solid #a9bbb1;
     margin: 8px 15px 8px 15px;
-    border-radius: 16px;
 }
 
 .nav-item a:hover,
@@ -173,12 +168,7 @@ figure {
 
 .nav-item.current-item > a,
 .nav-item.current-item > a {
-    padding: 8px 15px 8px 15px;
-    margin: 0;
-    border-radius: 16px;
     background: #d07058;
-    color: #fff;
-    border: none;
 }
 
 .nav-item.current-item a:active {
@@ -352,7 +342,8 @@ figure {
     padding: 8px 20px 8px 45px;
 }
 
-.basket-item {
+.basket-item,
+.login-item {
     position: relative;
 }
 
@@ -367,10 +358,6 @@ figure {
     bottom: 0;
     left: 0;
     margin: auto 17px;
-}
-
-.login-item {
-    position: relative;
 }
 
 .login-item:hover .login-form,
@@ -641,6 +628,7 @@ figure {
     color: #fff;
     transform: translateY(100%);
     right: 0;
+    z-index: 1;
 }
 
 .contacts-info a {
@@ -648,6 +636,7 @@ figure {
     font-size: 22px;
     line-height: 24px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .contacts-info p {
@@ -1094,7 +1083,7 @@ figure {
     line-height: 13px;
     color: #5b9ddf;
     top: -10px;
-    left: 5%;
+    left: 6%;
     transition: .3s;
 }
 
@@ -1136,6 +1125,14 @@ figure {
 .address-window b {
     font-size: 18px;
     line-height: 24px;
+}
+
+.address-window .modal-phone a {
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    color: #323232;
+    font-weight: bolder;
 }
 
 .modal-address {
@@ -1255,13 +1252,11 @@ figure {
     top: 0;
     bottom: 0;
     margin: auto;
-
 }
 
 .academy-href {
     border-bottom: 1px solid #ffffff33;
 }
-
 
 /* ============================CATALOG================================== */
 
@@ -1608,12 +1603,12 @@ figure {
     right: 8px;
 }
 
-.pagination .prev::before {
+.pagination .prev::before, 
+.pagination .next::before{
     content: "";
     position: absolute;
     background-image: url("../img/icon-right-small.svg");
     background-repeat: no-repeat;
-    transform: rotate(180deg);
     width: 14px;
     height: 14px;
     left: 0;
@@ -1623,18 +1618,8 @@ figure {
     margin: auto;  
 }
 
-.pagination .next::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon-right-small.svg");
-    background-repeat: no-repeat;
-    width: 14px;
-    height: 14px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;  
+.pagination .prev::before {
+    transform: rotate(180deg);
 }
 
 .pagination a.inactive {
@@ -1731,7 +1716,7 @@ figure {
     padding: 10px 15px;
 }
 
-.basket-dropdown::before {
+.basket-dropdown.dropdown::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -1746,6 +1731,7 @@ figure {
 .ctrl-item.basket-item a:hover ~ .basket-dropdown,
 .ctrl-item.basket-item a:focus ~ .basket-dropdown {
     display: block;
+    z-index: 2;
 }
 
 .feedback-modal {
@@ -1869,18 +1855,14 @@ figure {
 @keyframes bounce {
     0%   {
         transform: translateY(-200%) translateX(-50%);
-        transform: translateY(-200%) translateX(-50%);
     }
     80%  {
-        transform: translateY(-10%) translateX(-50%);
         transform: translateY(-10%) translateX(-50%);
     }
     90%  {
         transform: translateY(-30%) translateX(-50%);
-        transform: translateY(-30%) translateX(-50%);
     }
     100% {
-        transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
     }
   }
