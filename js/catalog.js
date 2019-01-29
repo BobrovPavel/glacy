@@ -4,6 +4,8 @@ var formEmaillInput = document.querySelector("#email-field");
 var formEmaillLabel = document.querySelector("#email-field + label");
 var formPasswordInput = document.querySelector("#password-field");
 var formPasswordlLabel = document.querySelector("#password-field + label");
+var searchInput = document.querySelector("#site-search");
+var searchLabel = document.querySelector("#site-search + label");
 
 function moveLabel(input, label) {
     if(input.value) {
@@ -12,6 +14,10 @@ function moveLabel(input, label) {
         label.classList.remove("label-hide");
     }
 }
+
+searchInput.addEventListener("focusout", function() {
+    moveLabel(searchInput, searchLabel);
+});
 
 formEmaillInput.addEventListener("focusout", function() {
     moveLabel(formEmaillInput, formEmaillLabel);
